@@ -17,4 +17,4 @@ COPY . .
 
 EXPOSE 4000
 
-ENTRYPOINT [ "ts-node", "index.ts" ]
+ENTRYPOINT [ "ts-node", "src/index.ts" ]
