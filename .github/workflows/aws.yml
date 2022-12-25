@@ -37,7 +37,7 @@ env:
   ECS_CLUSTER: prod                 # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: webserver/.aws/task-definition-prod.json # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
-  CONTAINER_NAME: web3hooks-server-prod           # set this to the name of the container in the
+  CONTAINER_NAME: web3hooks-prod           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
 
 permissions:
