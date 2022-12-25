@@ -4,7 +4,7 @@
 
 This is an integration between Zapier and RPC Providers. Currently only supports Infura.
 
-It basically allows users to create subscriptions to events, sending the contract and the topics of interest alongside with a hookUrl where they want to be notified. The webserver will connect to the RPC provider and subscribe to this events. When a matching event is emitted, the server will post the data to hookUrl.
+It basically allows users to create subscriptions to events, sending the contract address and the topics hashes of interest alongside with a hookUrl where they want to be notified. The webserver will connect to the RPC provider and subscribe to this events. When a matching event is emitted, the server will post the data to hookUrl.
 
 We save the subscription data just because in case of an outage, we can rerun the server and keep posting to the users.
 
