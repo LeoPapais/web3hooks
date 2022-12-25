@@ -10,7 +10,7 @@ import authentication from 'src/middlewares/authentication'
 const open = () => {
   const app = express()
   app.use(bodyParser.json())
-  app.use(authentication)
+  app.use('[^healthcheck]', authentication)
   endpoints(app)
 
   app.listen(settings.server.port, () => {
