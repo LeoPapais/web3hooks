@@ -1,3 +1,5 @@
+![build](https://github.com/LeoPapais/web3hooks/actions/workflows/aws.yml/badge.svg)
+
 # Web3hooks
 
 This is an integration between Zapier and RPC Providers. Currently only supports Infura.
