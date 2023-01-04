@@ -19,7 +19,7 @@ const reqSchema = z.object({
 type ValidatedReqType = z.infer<typeof reqSchema>
 
 const arrayfyPath = (path: string[], obj: unknown) => {
-  const elem = R.pathOr(path, [], obj)
+  const elem = R.pathOr([], path, obj)
   return typeof elem == typeof [] ? elem : [elem]
 }
 
@@ -28,7 +28,7 @@ const validate = (req: Request): ValidatedReqType => {
     rpcProvider: R.path(['query', 'rpc_provider'], req),
     providerKey: R.path(['query', 'provider_key'], req),
     address: R.path(['query', 'address'], req),
-    topics: arrayfyPath(['query', 'topics'], req)
+    topics: arrayfyPath(['query', 'topics'], req),
   })
 }
 
@@ -45,6 +45,7 @@ const handler = async (req: ValidatedReqType): Promise<Log[]> => {
       toBlock: '0xf61fc7',
     })
 
+    console.log('slice')
     return ans.slice(0, 5)
   }
   catch (e) {

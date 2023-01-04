@@ -11,6 +11,7 @@ const responser = <T, R>(validator: (req: Request) => T, handler: (valReq: T) =>
     if (e instanceof CustomErrors) {
       return res.status(e.code).send({ message: e.msg })
     }
+    console.error(e)
     return res.status(500).send({ message: 'UnexpectedError' })
   }
 }
